@@ -14,7 +14,6 @@ export default function login() {
 
   return (
     <div className='flex flex-col items-center justify-start min-h-screen py-8 px-4 sm:px-6 lg:px-8'>
-    {/* Заголовок и ссылка */}
         <div className='flex flex-col items-center mt-8 sm:mt-12 mb-8 sm:mb-16'>
             <h1 className='font-inter text-2xl sm:text-3xl md:text-4xl text-stone-800 font-bold mb-4 sm:mb-6 text-center'>
                 <span className='block sm:inline'>Электронный </span>

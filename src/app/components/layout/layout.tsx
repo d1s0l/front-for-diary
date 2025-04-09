@@ -1,13 +1,19 @@
-import { Sidebar } from "lucide-react";
-import { Main } from "next/document";
-import type { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react"
+import { Sidebar } from "./sidebar/Sidebar"
+import styles from './layout.module.scss'
 
-export default function LayoutClient({children}:
-PropsWithChildren<unknown>) {
-    return (
-        <main>
+export default function LayoutClient({
+  children
+}: PropsWithChildren<unknown>) {
+  return (
+    <main className={styles.layout}>
+        <div className="hidden lg:block">
             <Sidebar />
-            <section>{children}</section>
-        </main>
-    )
+        </div>
+
+        <section className="w-full lg:w-[calc(100%-16rem)]">
+            {children}
+        </section>
+    </main>
+  )
 }
