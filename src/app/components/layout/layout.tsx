@@ -6,7 +6,7 @@ export default function LayoutClient({
   children
 }: PropsWithChildren<unknown>) {
   return (
-    <main className={styles.layout}>
+    <main className='flex'>
         <div className="hidden lg:block">
             <Sidebar />
         </div>

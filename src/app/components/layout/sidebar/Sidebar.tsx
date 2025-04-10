@@ -16,9 +16,9 @@ export function Sidebar() {
   
             <div className='mb-11'>
                 <Link 
-                href='/lk' 
+                href='/account' 
                 className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/lk') 
+                    isActive('/account') 
                       ? 'bg-violet-100 text-violet-900' 
                       : 'hover:bg-gray-100'
                     }`}
@@ -38,7 +38,7 @@ export function Sidebar() {
                 </Link>
             </div>
 
-            <div className='h-1 bg-violet-400 mb-11'></div>
+            <div className='h-0.5 bg-violet-400 mb-11'></div>
 
             <div className=''>
                 <Link href='/home'
