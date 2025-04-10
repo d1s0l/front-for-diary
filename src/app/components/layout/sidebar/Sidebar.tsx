@@ -2,7 +2,6 @@
 import { usePathname } from 'next/navigation'
 import { Award, BookCheck, BookOpen, Calendar, ChartNoAxesCombined, HomeIcon, MessageSquareText, Newspaper, User2 } from 'lucide-react';
 import Link from 'next/link';
-import styles from "./Sidebar.module.scss"
 
 export function Sidebar() {
 
