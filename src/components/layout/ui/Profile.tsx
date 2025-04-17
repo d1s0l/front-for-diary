@@ -24,15 +24,12 @@ export default function Profile({
   return (
     <button 
       type="button" 
-      className='flex flex-row items-center justify-around rounded-3xl bg-violet-900 w-48 sm:w-56 md:w-60 lg:w-72 xl:w-80 hover:bg-violet-800 transition-colors'
+      className='flex flex-row items-center justify-between px-4 py-1 rounded-4xl bg-violet-600 hover:bg-violet-800 transition-colors'
       onClick={handleClick}
     >
-      <div className='[--icon-size:24px] md:[--icon-size:28px] lg:[--icon-size:34px] xl:[--icon-size:38px]'>
-        <UserIcon className="w-[var(--icon-size)] h-[var(--icon-size)] text-white" />
-      </div>
       <div className='flex flex-col items-baseline font-normal text-white'>
-        <p className='text-sm md:text-base lg:text-lg xl:text-xl'>{lastname} {firstname}</p>
-        <p className='text-xs md:text-sm lg:text-base xl:text-lg'>{classnumber} класс</p>
+        <p className='text-sm md:text-sm lg:text-base'>{lastname} {firstname}</p>
+        <p className='text-xs md:text-xs lg:text-sm'>{classnumber} класс</p>
       </div>
     </button>
   );

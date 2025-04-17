@@ -24,7 +24,7 @@ const AccountPage: React.FC = () => {
 
       
     return (
-      <div className='px-4.5 py-7.5'>
+      <div className=''>
 
         <div className='flex flex-row items-center px-4 gap-4 w-screen-min h-16 text-violet-950 bg-stone-50 rounded-2xl mb-10'>
           <User2 size={32}/>

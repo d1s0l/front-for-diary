@@ -12,7 +12,7 @@ export function MainLayout({
       <div className="hidden lg:block">
         <Sidebar />
       </div>
-      <section className="w-full lg:w-[calc(100%-16rem)]">
+      <section className="w-full py-7.5 pr-8 pl-4">
         {children}
       </section>
     </main>

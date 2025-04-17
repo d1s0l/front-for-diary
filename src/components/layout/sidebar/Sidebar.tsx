@@ -10,10 +10,10 @@ export function Sidebar() {
     const isActive = (href: string) => pathname === href
 
     return (
-        <aside className='rounded-3xl h-screen flex flex-col text-violet-900 py-4 bg-stone-50'>
-            <div className='text-lg font-medium mb-6 px-4'>Название заведения</div>
+        <aside className='rounded-r-3xl h-screen flex flex-col justify-between py-9 text-violet-900  bg-stone-50'>
+            <div className='text-lg font-medium px-4'>Название заведения</div>
   
-            <div className='mb-11'>
+            <div className=''>
                 <Link 
                 href='/student/account' 
                 className={`flex items-center gap-3 py-4 px-4 ${
@@ -37,7 +37,7 @@ export function Sidebar() {
                 </Link>
             </div>
 
-            <div className='h-0.5 bg-violet-400 mb-11'></div>
+            <div className='h-0.5 bg-violet-400'></div>
 
             <div className=''>
                 <Link href='/student/home'
