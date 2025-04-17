@@ -43,13 +43,13 @@ export const LessonCard = ({
         ${cardSize[size]} 
         p-4 bg-stone-50 rounded-lg 
         shadow-md hover:shadow-lg 
-        transition-all duration-200
+        transition-all duration-300 ease-in-out
+        transform hover:scale-105
         cursor-pointer
         ${className}
       `}
       onClick={handleClick}
     >
-      {/* Контейнер для иконки без обводки */}
       <div className={`
         flex items-center justify-center mt-8.5
         mb-6 w-[160px] h-[160px] ${iconClassName}
@@ -63,7 +63,6 @@ export const LessonCard = ({
         />
       </div>
       
-      {/* Название урока */}
       <h3 className="text-center text-2xl font-semibold text-neutral-700 line-clamp-2 px-2">
         {title}
       </h3>
