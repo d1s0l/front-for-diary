@@ -35,61 +35,61 @@ export default function LessonPage() {
                 <LessonCard 
                     svgName="math"
                     title="Математика"
-                    href="/lessons/math"
+                    href="/student/lessons/math"
                     size="md"
                 />
 
                 <LessonCard 
                     svgName="chemistry"
                     title="Химия"
-                    href="/lessons/math"
+                    href="/student/lessons/chemistry"
                     size="md"
                 />
 
                 <LessonCard 
                     svgName="biology"
                     title="Биология"
-                    href="/lessons/math"
+                    href="/student/lessons/biology"
                     size="md"
                 />
 
                 <LessonCard 
                     svgName="geography"
                     title="География"
-                    href="/lessons/math"
+                    href="/student/lessons/geography"
                     size="md"
                 />
 
                 <LessonCard 
                     svgName="literature"
                     title="Литература"
-                    href="/lessons/math"
+                    href="/student/lessons/literature"
                     size="md"
                 />
 
                 <LessonCard 
                     svgName="rus_lang"
                     title="Русский язык"
-                    href="/lessons/math"
+                    href="/student/lessons/rus_lang"
                     size="md"
                 />
 
                 <LessonCard 
                     svgName="physics"
                     title="Физика"
-                    href="/lessons/math"
+                    href="/student/lessons/physics"
                     size="md"
                 />
                 <LessonCard 
                     svgName="painting"
                     title="ИЗО"
-                    href="/lessons/math"
+                    href="/student/lessons/painting"
                     size="md"
                 />
                 <LessonCard 
                     svgName="gym"
                     title="Физ-ра"
-                    href="/lessons/math"
+                    href="/student/lessons/gym"
                     size="md"
                 />
             </div>
