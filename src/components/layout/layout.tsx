@@ -9,10 +9,10 @@ export function MainLayout({
 }) {
   return (
     <main className="flex">
-      <div className="hidden lg:block">
+      <div className="hidden md:block">
         <Sidebar />
       </div>
-      <section className="w-full py-7.5 pr-8 pl-4">
+      <section className="w-full px-4 py-4 lg:py-7.5 lg:pr-8 lg:pl-4">
         {children}
       </section>
     </main>

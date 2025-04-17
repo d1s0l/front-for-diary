@@ -10,8 +10,8 @@ export function Sidebar() {
     const isActive = (href: string) => pathname === href
 
     return (
-        <aside className='rounded-r-3xl h-screen flex flex-col justify-between py-9 text-violet-900  bg-stone-50'>
-            <div className='text-lg font-medium px-4'>Название заведения</div>
+        <aside className='rounded-r-3xl h-screen flex flex-col justify- py-9 text-violet-900  bg-stone-50'>
+            <div className='text-lg font-medium px-4 mb-11'>Название заведения</div>
   
             <div className=''>
                 <Link 
@@ -23,7 +23,7 @@ export function Sidebar() {
                     }`}
                 >
                 <User2 size={22} />
-                <span className='text-[18px] font-normal'>Профиль</span>
+                <span className='text-[18px] xl:text-xl font-normal'>Профиль</span>
                 </Link>
                 <Link href='/student/chat'
                 className={`flex items-center gap-3 py-4 px-4 ${
@@ -33,7 +33,7 @@ export function Sidebar() {
                     }`}
                 >
                 <MessageSquareText size={22} />
-                <span className='text-[18px] font-normal'>Чат</span>
+                <span className='text-[18px] xl:text-xl font-normal'>Чат</span>
                 </Link>
             </div>
 
@@ -48,7 +48,7 @@ export function Sidebar() {
                     }`}
                 >
                     <HomeIcon size={22} />
-                    <span className='text-[18px] font-normal'>Главная</span>
+                    <span className='text-[18px] xl:text-xl font-normal'>Главная</span>
                 </Link>
                 <Link href='/student/news' 
                 className={`flex items-center gap-3 py-4 px-4 ${
@@ -58,7 +58,7 @@ export function Sidebar() {
                     }`}
                 >
                     <Newspaper size={22} />
-                    <span className='text-[18px] font-normal'>Новости</span>
+                    <span className='text-[18px] xl:text-xl font-normal'>Новости</span>
                 </Link>
                 <Link href='/student/schedule'
                 className={`flex items-center gap-3 py-4 px-4 ${
@@ -67,7 +67,7 @@ export function Sidebar() {
                         : 'hover:bg-gray-100'
                     }`}                 >
                     <Calendar size={22} />
-                    <span className='text-[18px] font-normal'>Расписание</span>
+                    <span className='text-[18px] xl:text-xl font-normal'>Расписание</span>
                 </Link>
                 <Link href='/student/homework' 
                 className={`flex items-center gap-3 py-4 px-4 ${
@@ -77,7 +77,7 @@ export function Sidebar() {
                     }`}    
                 >
                     <BookOpen size={22} />
-                    <span className='text-[18px] font-normal'>Домашние задания</span>
+                    <span className='text-[18px] xl:text-xl font-normal whitespace-nowrap overflow-hidden'>Домашние задания</span>
                 </Link>
                 <Link href='/student/lessons' 
                 className={`flex items-center gap-3 py-4 px-4 ${
@@ -87,7 +87,7 @@ export function Sidebar() {
                     }`}    
                 >
                     <BookCheck size={22} />
-                    <span className='text-[18px] font-normal'>Предметы</span>
+                    <span className='text-[18px] xl:text-xl font-normal'>Предметы</span>
                 </Link>
                 <Link href='/student/analytics' 
                 className={`flex items-center gap-3 py-4 px-4 ${
@@ -97,7 +97,7 @@ export function Sidebar() {
                     }`}    
                 >
                     <ChartNoAxesCombined size={22} />
-                    <span className='text-[18px] font-normal'>Аналитика</span>
+                    <span className='text-[18px] xl:text-xl font-normal'>Аналитика</span>
                 </Link>
                 <Link href='/student/awards' 
                 className={`flex items-center gap-3 py-4 px-4 ${
@@ -107,7 +107,7 @@ export function Sidebar() {
                     }`}    
                 >
                     <Award size={22} />
-                    <span className='text-[18px] font-normal'>Достижения</span>
+                    <span className='text-[18px] xl:text-xl font-normal'>Достижения</span>
                 </Link>
             </div>
         </aside>

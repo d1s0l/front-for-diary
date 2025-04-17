@@ -24,13 +24,10 @@ export default function Profile({
   return (
     <button 
       type="button" 
-      className='flex flex-row items-center justify-between px-4 py-1 rounded-4xl bg-violet-600 hover:bg-violet-800 transition-colors'
-      onClick={handleClick}
-    >
-      <div className='flex flex-col items-baseline font-normal text-white'>
-        <p className='text-sm md:text-sm lg:text-base'>{lastname} {firstname}</p>
-        <p className='text-xs md:text-xs lg:text-sm'>{classnumber} класс</p>
-      </div>
+      className='hidden w-max lg:block px-4 py-1 rounded-4xl font-normal bg-violet-600 hover:bg-violet-800 transition-colors text-stone-50'
+      onClick={handleClick}>
+      <p className='text-sm md:text-sm lg:text-base'>{lastname} {firstname}</p>
+      <p className='text-xs md:text-xs lg:text-sm'>{classnumber} класс</p>
     </button>
   );
 }
