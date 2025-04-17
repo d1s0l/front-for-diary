@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import { User2 } from 'lucide-react'
-import { DataField } from '../components/layout/ui/DataField';
+import { DataField } from '@/components/layout/ui/DataField';
 
 interface UserProfile {
     lastName: string;

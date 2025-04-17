@@ -15,9 +15,9 @@ export function Sidebar() {
   
             <div className='mb-11'>
                 <Link 
-                href='/account' 
+                href='/student/account' 
                 className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/account') 
+                    isActive('/student/account') 
                       ? 'bg-violet-100 text-violet-900' 
                       : 'hover:bg-gray-100'
                     }`}
@@ -25,9 +25,9 @@ export function Sidebar() {
                 <User2 size={22} />
                 <span className='text-[18px] font-normal'>Профиль</span>
                 </Link>
-                <Link href='/chat'
+                <Link href='/student/chat'
                 className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/chat') 
+                    isActive('/student/chat') 
                       ? 'bg-violet-100 text-violet-900' 
                       : 'hover:bg-gray-100'
                     }`}
@@ -40,9 +40,9 @@ export function Sidebar() {
             <div className='h-0.5 bg-violet-400 mb-11'></div>
 
             <div className=''>
-                <Link href='/home'
+                <Link href='/student/home'
                 className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/home') 
+                    isActive('/student/home') 
                       ? 'bg-violet-100 text-violet-900' 
                       : 'hover:bg-gray-100'
                     }`}
@@ -50,9 +50,9 @@ export function Sidebar() {
                     <HomeIcon size={22} />
                     <span className='text-[18px] font-normal'>Главная</span>
                 </Link>
-                <Link href='/news' 
+                <Link href='/student/news' 
                 className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/news') 
+                    isActive('/student/news') 
                       ? 'bg-violet-100 text-violet-900' 
                       : 'hover:bg-gray-100'
                     }`}
@@ -60,18 +60,18 @@ export function Sidebar() {
                     <Newspaper size={22} />
                     <span className='text-[18px] font-normal'>Новости</span>
                 </Link>
-                <Link href='/schedule'
+                <Link href='/student/schedule'
                 className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/schedule') 
+                    isActive('/student/schedule') 
                         ? 'bg-violet-100 text-violet-900' 
                         : 'hover:bg-gray-100'
                     }`}                 >
                     <Calendar size={22} />
                     <span className='text-[18px] font-normal'>Расписание</span>
                 </Link>
-                <Link href='/homework' 
+                <Link href='/student/homework' 
                 className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/homework') 
+                    isActive('/student/homework') 
                         ? 'bg-violet-100 text-violet-900' 
                         : 'hover:bg-gray-100'
                     }`}    
@@ -79,9 +79,9 @@ export function Sidebar() {
                     <BookOpen size={22} />
                     <span className='text-[18px] font-normal'>Домашние задания</span>
                 </Link>
-                <Link href='/lessons' 
+                <Link href='/student/lessons' 
                 className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/lessons') 
+                    isActive('/student/lessons') 
                         ? 'bg-violet-100 text-violet-900' 
                         : 'hover:bg-gray-100'
                     }`}    
@@ -89,9 +89,9 @@ export function Sidebar() {
                     <BookCheck size={22} />
                     <span className='text-[18px] font-normal'>Предметы</span>
                 </Link>
-                <Link href='/analytics' 
+                <Link href='/student/analytics' 
                 className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/analytics') 
+                    isActive('/student/analytics') 
                         ? 'bg-violet-100 text-violet-900' 
                         : 'hover:bg-gray-100'
                     }`}    
@@ -99,9 +99,9 @@ export function Sidebar() {
                     <ChartNoAxesCombined size={22} />
                     <span className='text-[18px] font-normal'>Аналитика</span>
                 </Link>
-                <Link href='/awards' 
+                <Link href='/student/awards' 
                 className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/awards') 
+                    isActive('/student/awards') 
                         ? 'bg-violet-100 text-violet-900' 
                         : 'hover:bg-gray-100'
                     }`}    

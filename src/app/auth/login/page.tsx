@@ -1,7 +1,6 @@
 'use client';
 import { signIn } from 'next-auth/react';
 import { useState } from 'react';
-import AuthLayout from '../layout';
 
 
 export default function isLoginPage() {
@@ -14,7 +13,6 @@ export default function isLoginPage() {
   };
 
   return (
-    <AuthLayout>
         <div className='flex flex-col items-center justify-start min-h-screen py-8 px-4 sm:px-6 lg:px-8'>
             <div className='flex flex-col items-center mt-8 sm:mt-12 mb-8 sm:mb-16'>
                 <h1 className='font-inter text-2xl sm:text-3xl md:text-4xl text-stone-800 font-bold mb-4 sm:mb-6 text-center'>
@@ -46,7 +44,7 @@ export default function isLoginPage() {
                     
                     <button 
                     type="submit" 
-                    className='bg-violet-900 hover:bg-violet-800 transition-colors rounded-xl sm:rounded-2xl w-full h-12 sm:h-14 text-stone-50'
+                    className='bg-violet-900 hover:bg-violet-800 transition-colors cursor-pointer rounded-xl sm:rounded-2xl w-full h-12 sm:h-14 text-stone-50'
                     >
                     Войти
                     </button>
@@ -56,11 +54,12 @@ export default function isLoginPage() {
     
                 <button 
                     type="button" 
-                    className='font-inter font-semibold w-full h-12 sm:h-14 border-2 sm:border-3 border-violet-900 rounded-xl sm:rounded-2xl text-violet-900 hover:bg-violet-50 transition-colors'>
+                    className='font-inter cursor-pointer font-semibold w-full h-12 sm:h-14 border-2 sm:border-3 border-violet-900 rounded-xl sm:rounded-2xl text-violet-900 hover:bg-violet-50 transition-colors'
+                    onClick={() => window.open("https://rutube.ru/video/f3b615db135287a64584737e664e1e4b/", "_blank")}
+                    >
                     Войти через ГосУслуги
                 </button>
             </div>
         </div>
-    </AuthLayout>
   )
 }
