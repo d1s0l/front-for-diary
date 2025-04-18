@@ -26,13 +26,13 @@ const AccountPage: React.FC = () => {
     return (
       <div className=''>
 
-        <div className='flex flex-row items-center px-4 gap-4 w-screen-min h-16 text-violet-950 bg-stone-50 rounded-2xl mb-10'>
+        <div className='flex flex-row items-center px-4 gap-4 w-screen-min h-16 text-violet-900 bg-stone-50 rounded-2xl mb-10'>
           <User2 size={32}/>
           <span className='font-semibold text-2xl'>Профиль</span>
         </div>
 
         <div className=''>
-          <p className='text-3xl font-semibold text-violet-950 mb-4'>Персональные данные</p>
+          <p className='text-3xl font-semibold text-violet-900 mb-4'>Персональные данные</p>
 
           <div className='flex flex-col gap-4 md:flex-row'>
             {/* Первая колонка */}

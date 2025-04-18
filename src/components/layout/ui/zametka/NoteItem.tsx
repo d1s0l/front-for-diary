@@ -45,9 +45,9 @@ export const NoteItem = ({ id, label, checked, onToggle }: NoteItemProps) => {
       </div>
       
       <span className={`
-        text-sm sm:text-base md:text-lg  // Размер шрифта для разных экранов
-        ${checked ? 'line-through text-gray-400' : 'text-violet-800'}
-        break-words max-w-[calc(100%-3rem)]  // Перенос длинного текста
+        text-sm sm:text-base md:text-lg
+        ${checked ? 'line-through text-gray-400' : 'text-violet-500'}
+        break-words max-w-[calc(100%-3rem)] 
       `}>
         {label}
       </span>

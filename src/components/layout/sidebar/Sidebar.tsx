@@ -22,8 +22,8 @@ export function Sidebar() {
                       : 'hover:bg-gray-100'
                     }`}
                 >
-                <User2 size={22} />
-                <span className='text-[18px] xl:text-xl font-normal'>Профиль</span>
+                    <User2 size={22} />
+                    <span className='text-[18px] xl:text-xl font-normal'>Профиль</span>
                 </Link>
                 <Link href='/student/chat'
                 className={`flex items-center gap-3 py-4 px-4 ${
@@ -32,12 +32,12 @@ export function Sidebar() {
                       : 'hover:bg-gray-100'
                     }`}
                 >
-                <MessageSquareText size={22} />
-                <span className='text-[18px] xl:text-xl font-normal'>Чат</span>
+                    <MessageSquareText size={22} />
+                    <span className='text-[18px] xl:text-xl font-normal'>Чат</span>
                 </Link>
             </div>
 
-            <div className='h-0.5 bg-violet-400 mb-10'></div>
+            <div className='h-1 bg-violet-400 mb-10'></div>
 
             <div className=''>
                 <Link href='/student/home'

@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import Profile from "@/components/layout/ui/Profile";
-import { HomeIcon } from "lucide-react";
+import { ChevronLeft, ChevronRight, HomeIcon } from "lucide-react";
+import { Schedule } from "@/components/layout/ui/Schedules/ScheduleForHomePage";
+import { scheduleData } from '@/data/schedule-data'
 import { IconTextElement } from "@/components/layout/ui/Header";
 import { AddNoteButton } from "@/components/layout/ui/zametka/AddNoteButton";
 import { NoteInput } from "@/components/layout/ui/zametka/NoteInput";
@@ -23,6 +25,8 @@ interface Note {
 const staticUserData: UserName = {
   firstName: 'Дмитрий',
 };
+
+
 
 const HomePage: React.FC = () => {
   const userData = staticUserData;
@@ -52,62 +56,80 @@ const HomePage: React.FC = () => {
 
   return (
     <div>
-      <div className="flex justify-between mb-10">
-        <IconTextElement icon={HomeIcon} text='Главная'/>
-        <Profile />
-      </div>
-      
-      <div className="flex flex-col lg:flex-row justify-around items-center mb-5 gap-6">
-        <img className="hidden lg:block" src="/card.png" alt="Статистика" />
-        <div className="flex flex-col gap-5 w-full lg:w-2/3">
-          <span className="text-violet-900 font-semibold text-2xl lg:text-3xl text-center lg:text-left">
-            Добрый день, {userData.firstName}!
-          </span>
-          <span className="text-neutral-900 font-normal text-lg lg:text-xl text-center lg:text-left">
-            Общий уровень успеваемости в текущем месяце выше, чем в декабре. Так держать!
-          </span>
-        </div>
-      </div>
+        <header className="flex justify-between mb-10">
+            <IconTextElement icon={HomeIcon} text='Главная'/>
+            <Profile />
+        </header>
+  
+        <section className="flex flex-col lg:flex-row justify-around items-center mb-5 gap-6">
+            <img className="hidden lg:block" src="/card.png" alt="График успеваемости" />
+            <div className="flex flex-col gap-5 w-full lg:w-2/3">
+                <h2 className="text-violet-700 font-semibold text-2xl lg:text-3xl text-center lg:text-left">
+                    Добрый день, {userData.firstName}!
+                </h2>
+                <p className="text-neutral-900 font-normal text-lg lg:text-xl text-center lg:text-left">
+                    Общий уровень успеваемости в текущем месяце выше, чем в декабре. Так держать!
+                </p>
+            </div>
+        </section>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr_1fr] gap-6 mb-10">
-            <div className="bg-stone-50 px-6 py-4 rounded-2xl shadow-sm">
-                <div className="flex flex-wrap justify-between items-center mb-15.5">
-                <span className="font-semibold text-neutral-900 text-2xl">Заметки</span>
-                <AddNoteButton onClick={() => setIsAdding(true)} />
+        <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr_1fr] gap-6 mb-10">
+            <article className="bg-stone-50 px-6 py-4 rounded-2xl shadow-sm">
+                <div className="flex flex-wrap justify-between items-center mb-4">
+                    <h2 className="font-semibold text-neutral-900 text-2xl">Заметки</h2>
+                    <AddNoteButton onClick={() => setIsAdding(true)} />
                 </div>
-                
+        
                 {isAdding && (
-                <NoteInput
+                    <NoteInput
                     value={newNoteText}
                     onChange={setNewNoteText}
                     onAdd={handleAddNote}
                     onCancel={() => setIsAdding(false)}
-                />
+                    />
                 )}
 
-                <div className="space-y-2">
-                {notes.map((note) => (
-                    <NoteItem
-                    key={note.id}
-                    id={note.id}
-                    label={note.label}
-                    checked={note.checked}
-                    onToggle={toggleNote}
-                    />
-                ))}
-                </div>
-            </div>
+                <ul className="space-y-2">
+                    {notes.map((note) => (
+                    <li key={note.id}>
+                        <NoteItem
+                        id={note.id}
+                        label={note.label}
+                        checked={note.checked}
+                        onToggle={toggleNote}
+                        />
+                    </li>
+                    ))}
+                </ul>
+            </article>
 
-            <div className="flex flex-col items-center justify-between bg-stone-50 px-6 pb-14 pt-4 rounded-2xl shadow-sm h-full min-h-[300px]">
-                <span className="text-xl text-blue-500">Средний балл</span>
-                <ScoreCircle score={4.15} size={150} />
-            </div> 
+            <article className="flex flex-col items-center justify-between bg-stone-50 px-6 pb-14 pt-4 rounded-2xl shadow-sm h-full min-h-[300px]">
+                <h2 className="text-xl text-blue-500">Средний балл</h2>
+                <ScoreCircle score={5} size={150} />
+            </article>
 
-            <div className="flex flex-col items-center justify-between bg-stone-50 px-6 pb-14 pt-4 rounded-2xl shadow-sm h-full min-h-[300px]">
-                <span className="text-xl text-blue-500">Посещаемость</span>
+            <article className="flex flex-col items-center justify-between bg-stone-50 px-6 pb-14 pt-4 rounded-2xl shadow-sm h-full min-h-[300px]">
+                <h2 className="text-xl text-blue-500">Посещаемость</h2>
                 <PercentageCircle percentage={85} size={150} />
-            </div>        
-        </div>
+            </article>
+        </section>
+        
+        <section>
+            <div className="flex flex-row justify-between mb-4">
+                <h2 className="text-2xl text-violet-900 font-semibold">Расписание</h2>
+                <nav className="flex flex-row gap-2.5">
+                    <a href="/student/schedule"
+                    className="text-base text-violet-500 flex items-center"
+                    >
+                        <ChevronLeft /> Показать всё <ChevronRight />
+                    </a>
+                </nav>
+            </div>
+            <div>
+                <Schedule data={scheduleData} />
+            </div>
+        </section>
+
     </div>
   );
 };
