@@ -13,7 +13,7 @@ export function Sidebar() {
         <aside className='rounded-r-3xl h-screen flex flex-col justify- py-9 text-violet-900  bg-stone-50'>
             <div className='text-lg font-medium px-4 mb-11'>Название заведения</div>
   
-            <div className=''>
+            <div className='mb-10'>
                 <Link 
                 href='/student/account' 
                 className={`flex items-center gap-3 py-4 px-4 ${
@@ -37,7 +37,7 @@ export function Sidebar() {
                 </Link>
             </div>
 
-            <div className='h-0.5 bg-violet-400'></div>
+            <div className='h-0.5 bg-violet-400 mb-10'></div>
 
             <div className=''>
                 <Link href='/student/home'
