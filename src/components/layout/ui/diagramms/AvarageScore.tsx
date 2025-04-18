@@ -1,10 +1,10 @@
 "use client";
 
 interface ScoreCircleProps {
-  score: number; // Оценка от 1 до 5
-  size?: number; // Размер в пикселях (по умолчанию 60)
-  strokeWidth?: number; // Толщина линии (по умолчанию 8)
-  precision?: number; // Точность отображения (0, 1 или 2 знака)
+  score: number; 
+  size?: number; 
+  strokeWidth?: number; 
+  precision?: number; 
 }
 
 export const ScoreCircle = ({ 
@@ -35,7 +35,6 @@ export const ScoreCircle = ({
     return rounded % 1 === 0 ? rounded.toFixed(0) : rounded.toFixed(2);
   };
 
-  // Рассчитываем параметры круга
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;

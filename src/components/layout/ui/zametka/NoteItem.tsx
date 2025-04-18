@@ -9,8 +9,7 @@ interface NoteItemProps {
 
 export const NoteItem = ({ id, label, checked, onToggle }: NoteItemProps) => {
   return (
-    <label className="flex items-center gap-2 sm:gap-3 cursor-pointer group w-full">
-      {/* Скрытый нативный чекбокс */}
+    <label className="flex items-center gap-3 sm:gap-3 cursor-pointer group w-full">
       <input 
         type="checkbox" 
         checked={checked}
@@ -18,9 +17,8 @@ export const NoteItem = ({ id, label, checked, onToggle }: NoteItemProps) => {
         className="sr-only"
       />
       
-      {/* Кастомный адаптивный чекбокс */}
       <div className={`
-        w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8  // Размеры для разных экранов
+        w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 
         border-2 rounded-md flex items-center justify-center 
         transition-colors duration-200
         ${checked 
@@ -33,12 +31,12 @@ export const NoteItem = ({ id, label, checked, onToggle }: NoteItemProps) => {
             viewBox="0 0 14 14" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
-            className="text-white w-3 h-3 sm:w-4 sm:h-4"  // Адаптивный размер иконки
+            className="text-white w-3 h-3 sm:w-4 sm:h-4"  
           >
             <path 
               d="M2 7L5.5 11L12 3" 
               stroke="currentColor" 
-              strokeWidth="1.5"  // Оптимальная толщина
+              strokeWidth="1.5" 
               strokeLinecap="square"  
               strokeLinejoin="miter" 
             />
@@ -46,7 +44,6 @@ export const NoteItem = ({ id, label, checked, onToggle }: NoteItemProps) => {
         )}
       </div>
       
-      {/* Адаптивный текст */}
       <span className={`
         text-sm sm:text-base md:text-lg  // Размер шрифта для разных экранов
         ${checked ? 'line-through text-gray-400' : 'text-violet-800'}
