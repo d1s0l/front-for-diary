@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Profile from "@/components/layout/ui/Profile";
+import Profile  from "@/components/layout/ui/Profile";
 import { ChevronLeft, ChevronRight, HomeIcon } from "lucide-react";
 import { Schedule } from "@/components/layout/ui/Schedules/ScheduleForHomePage";
 import { scheduleData } from '@/data/schedule-data'
@@ -105,12 +105,12 @@ const HomePage: React.FC = () => {
 
             <article className="flex flex-col items-center justify-between bg-stone-50 px-6 pb-14 pt-4 rounded-2xl shadow-sm h-full min-h-[300px]">
                 <h2 className="text-xl text-blue-500">Средний балл</h2>
-                <ScoreCircle score={5} size={150} />
+                <ScoreCircle score={1.20} size={150} />
             </article>
 
             <article className="flex flex-col items-center justify-between bg-stone-50 px-6 pb-14 pt-4 rounded-2xl shadow-sm h-full min-h-[300px]">
                 <h2 className="text-xl text-blue-500">Посещаемость</h2>
-                <PercentageCircle percentage={85} size={150} />
+                <PercentageCircle percentage={35} size={150} />
             </article>
         </section>
         

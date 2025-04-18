@@ -1,31 +1,21 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
-import { ScheduleProps, DaySchedule, Lesson } from "@/types/schedule-types";
+import { useRef } from "react";
+import { BookOpen } from "lucide-react";
+import { ScheduleProps, Lesson } from "@/types/schedule-types";
 import { scheduleData as defaultScheduleData } from "@/data/schedule-data";
 
 export const Schedule = ({ 
   data = defaultScheduleData,
   visibleLessons = 3 
 }: ScheduleProps) => {
-  const [currentDayIndex, setCurrentDayIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
-  
-  const currentDay = data[currentDayIndex];
+  const currentDay = data[0]; // Всегда показываем первый день
   const lessonHeight = 120;
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    // Обработка скролла при необходимости
   };
-
-  const goToNextDay = () => {
-    setCurrentDayIndex(prev => Math.min(prev + 1, data.length - 1));
-  };
-
-  const goToPrevDay = () => {
-    setCurrentDayIndex(prev => Math.max(prev - 1, 0));
-  };
-
 
   const LessonCard = ({ lesson }: { lesson: Lesson }) => (
     <div className="pb-4 border-b border-gray-200 last:border-0">
@@ -61,29 +51,11 @@ export const Schedule = ({
 
   return (
     <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
-      <div className="flex justify-between items-center p-4 border-b border-gray-200">
-        <button 
-          onClick={goToPrevDay}
-          disabled={currentDayIndex === 0}
-          className="flex items-center text-violet-700 hover:text-violet-500 disabled:opacity-50"
-        >
-          <ChevronLeft className="mr-1" />
-          <span className="hidden sm:inline">Предыдущий</span>
-        </button>
-        
+      <div className="flex justify-center items-center p-4 border-b border-gray-200">
         <div className="text-center">
           <h3 className="text-2xl font-semibold text-violet-900">{currentDay.day}</h3>
           <p className="text-base text-neutral-700">{currentDay.date}</p>
         </div>
-        
-        <button 
-          onClick={goToNextDay}
-          disabled={currentDayIndex === data.length - 1}
-          className="flex items-center text-violet-700 hover:text-violet-500 disabled:opacity-50"
-        >
-          <span className="hidden sm:inline">Следующий</span>
-          <ChevronRight className="ml-1" />
-        </button>
       </div>
 
       <div className="flex h-full">
