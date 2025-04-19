@@ -1,7 +1,7 @@
-import Profile from "@/components/layout/ui/Profile"
+import Profile from "@/components/layout/ui/Header/Profile"
 import { BookCheck } from "lucide-react"
 import { LessonCard } from "@/components/layout/ui/Lesson"
-import { IconTextElement } from "@/components/layout/ui/Header"
+import { IconTextElement } from "@/components/layout/ui/Header/IconTextElement"
 
 export default function LessonPage() {
     return(

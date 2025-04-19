@@ -1,6 +1,6 @@
-import Profile from "@/components/layout/ui/Profile"
+import Profile from "@/components/layout/ui/Header/Profile"
 import { MessageSquareText } from 'lucide-react'
-import { IconTextElement } from "@/components/layout/ui/Header"
+import { IconTextElement } from "@/components/layout/ui/Header/IconTextElement"
 
 
 export default function Chat(){

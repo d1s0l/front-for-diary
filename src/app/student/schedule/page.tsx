@@ -1,5 +1,5 @@
-import { IconTextElement } from "@/components/layout/ui/Header";
-import Profile from "@/components/layout/ui/Profile";
+import { IconTextElement } from "@/components/layout/ui/Header/IconTextElement";
+import Profile from "@/components/layout/ui/Header/Profile";
 import { Schedule } from "@/components/layout/ui/Schedules/ScheduleForSchedulePage";
 import { Calendar } from "lucide-react";
 import { scheduleData } from "@/data/schedule-data";

@@ -10,11 +10,10 @@ export const Schedule = ({
   visibleLessons = 3 
 }: ScheduleProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const currentDay = data[0]; // Всегда показываем первый день
+  const currentDay = data[0];
   const lessonHeight = 120;
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    // Обработка скролла при необходимости
   };
 
   const LessonCard = ({ lesson }: { lesson: Lesson }) => (
@@ -50,13 +49,13 @@ export const Schedule = ({
   );
 
   return (
-    <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
-      <div className="flex justify-center items-center p-4 border-b border-gray-200">
+    <div className="flex flex-col bg-stone-50 rounded-2xl shadow-md overflow-hidden border border-gray-200">
+      <section className="flex justify-center items-center p-4 border-b border-gray-200">
         <div className="text-center">
           <h3 className="text-2xl font-semibold text-violet-900">{currentDay.day}</h3>
           <p className="text-base text-neutral-700">{currentDay.date}</p>
         </div>
-      </div>
+      </section>
 
       <div className="flex h-full">
         <div 

@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Profile  from "@/components/layout/ui/Profile";
+import Profile  from "@/components/layout/ui/Header/Profile";
 import { ChevronLeft, ChevronRight, HomeIcon } from "lucide-react";
 import { Schedule } from "@/components/layout/ui/Schedules/ScheduleForHomePage";
 import { scheduleData } from '@/data/schedule-data'
-import { IconTextElement } from "@/components/layout/ui/Header";
+import { IconTextElement } from "@/components/layout/ui/Header/IconTextElement";
 import { AddNoteButton } from "@/components/layout/ui/zametka/AddNoteButton";
 import { NoteInput } from "@/components/layout/ui/zametka/NoteInput";
 import { NoteItem } from "@/components/layout/ui/zametka/NoteItem";

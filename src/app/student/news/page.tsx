@@ -1,5 +1,5 @@
-import Profile from "@/components/layout/ui/Profile";
-import { IconTextElement } from "@/components/layout/ui/Header";
+import Profile from "@/components/layout/ui/Header/Profile";
+import { IconTextElement } from "@/components/layout/ui/Header/IconTextElement";
 import { Newspaper } from "lucide-react";
 
 export default function NewsPage(){
