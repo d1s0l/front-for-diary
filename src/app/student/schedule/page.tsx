@@ -19,7 +19,7 @@ export default function SchedulePage() {
           <div key={index} className="h-full">
             <Schedule 
               data={[daySchedule]}
-              visibleLessons={3} // Показываем до 3 уроков
+              visibleLessons={3}
             />
           </div>
         ))}
