@@ -53,14 +53,10 @@ export const Schedule = ({
     </div>
   );
 
-  const ScheduleFooter = () => (
-    <div className="px-4 py-2 bg-gray-50 text-sm text-gray-500 border-t border-gray-200">
-      Показано {Math.min(currentDay.lessons.length, visibleLessons)} из {currentDay.lessons.length} уроков
-    </div>
-  );
+  
 
   return (
-    <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+    <div className="flex flex-col bg-stone-50 rounded-2xl shadow-md overflow-hidden border border-gray-200">
       <div className="flex justify-between items-center p-4 border-b border-gray-200">
         <button 
           onClick={goToPrevDay}
@@ -91,19 +87,14 @@ export const Schedule = ({
           ref={scrollRef}
           onScroll={handleScroll}
           className="flex-1 overflow-y-auto p-4"
-          style={{ height: `${visibleLessons * lessonHeight}px` }}
-        >
+          >
           <div className="space-y-4">
             {currentDay.lessons.map((lesson, idx) => (
               <LessonCard key={idx} lesson={lesson} />
             ))}
           </div>
         </div>
-
-        <ScrollBar />
       </div>
-
-      <ScheduleFooter />
     </div>
   );
 };
