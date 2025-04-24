@@ -1,115 +1,153 @@
 'use client'
 import { usePathname } from 'next/navigation'
-import { Award, BookCheck, BookOpen, Calendar, ChartNoAxesCombined, HomeIcon, MessageSquareText, Newspaper, User2 } from 'lucide-react';
-import Link from 'next/link';
+import { HomeIcon, MessageSquareText, Calendar, User2, Newspaper, BookOpen, BookCheck, ChartNoAxesCombined, Award, MenuIcon } from 'lucide-react'
+import Link from 'next/link'
 
 export function Sidebar() {
+  const pathname = usePathname()
 
-    const pathname = usePathname()
+  const isActive = (href: string) => pathname === href
 
-    const isActive = (href: string) => pathname === href
+  const mobileLinks = [
+    { href: '/student/home', icon: HomeIcon, label: 'Главная' },
+    { href: '/student/chat', icon: MessageSquareText, label: 'Чат' },
+    { href: '/student/schedule', icon: Calendar, label: 'Расписание' },
+    { href: '/student/menu', icon: MenuIcon, label: 'Меню' }
+  ]
 
-    return (
-        <aside className='rounded-r-3xl h-screen flex flex-col justify- py-9 text-violet-900  bg-stone-50'>
-            <div className='text-lg font-medium px-4 mb-11'>Название заведения</div>
+  return (
+    <>
+      <aside className='hidden lg:block rounded-r-3xl h-screen sticky top-0 flex-col py-9 text-violet-900 bg-stone-50'>
+        <div className='text-lg font-medium px-4 mb-11'>Название заведения</div>
   
-            <div className='mb-10'>
-                <Link 
-                href='/student/account' 
-                className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/student/account') 
-                      ? 'bg-violet-100 text-violet-900' 
-                      : 'hover:bg-gray-100'
-                    }`}
-                >
-                    <User2 size={22} />
-                    <span className='text-[18px] xl:text-xl font-normal'>Профиль</span>
-                </Link>
-                <Link href='/student/chat'
-                className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/student/chat') 
-                      ? 'bg-violet-100 text-violet-900' 
-                      : 'hover:bg-gray-100'
-                    }`}
-                >
-                    <MessageSquareText size={22} />
-                    <span className='text-[18px] xl:text-xl font-normal'>Чат</span>
-                </Link>
-            </div>
+        <div className='mb-5'>
+          <Link 
+            href='/student/account' 
+            className={`flex items-center gap-3 py-4 px-4 ${
+              isActive('/student/account') 
+                ? 'bg-violet-100 text-violet-900' 
+                : 'hover:bg-gray-100'
+            }`}
+          >
+            <User2 size={22} />
+            <span className='text-[18px] xl:text-xl font-normal'>Профиль</span>
+          </Link>
+          <Link 
+            href='/student/chat'
+            className={`flex items-center gap-3 py-4 px-4 ${
+              isActive('/student/chat') 
+                ? 'bg-violet-100 text-violet-900' 
+                : 'hover:bg-gray-100'
+            }`}
+          >
+            <MessageSquareText size={22} />
+            <span className='text-[18px] xl:text-xl font-normal'>Чат</span>
+          </Link>
+        </div>
 
-            <div className='h-1 bg-violet-400 mb-10'></div>
+        <div className='h-1 bg-violet-400 mb-5 '></div>
 
-            <div className=''>
-                <Link href='/student/home'
-                className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/student/home') 
-                      ? 'bg-violet-100 text-violet-900' 
-                      : 'hover:bg-gray-100'
-                    }`}
-                >
-                    <HomeIcon size={22} />
-                    <span className='text-[18px] xl:text-xl font-normal'>Главная</span>
-                </Link>
-                <Link href='/student/news' 
-                className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/student/news') 
-                      ? 'bg-violet-100 text-violet-900' 
-                      : 'hover:bg-gray-100'
-                    }`}
-                >
-                    <Newspaper size={22} />
-                    <span className='text-[18px] xl:text-xl font-normal'>Новости</span>
-                </Link>
-                <Link href='/student/schedule'
-                className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/student/schedule') 
-                        ? 'bg-violet-100 text-violet-900' 
-                        : 'hover:bg-gray-100'
-                    }`}                 >
-                    <Calendar size={22} />
-                    <span className='text-[18px] xl:text-xl font-normal'>Расписание</span>
-                </Link>
-                <Link href='/student/homework' 
-                className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/student/homework') 
-                        ? 'bg-violet-100 text-violet-900' 
-                        : 'hover:bg-gray-100'
-                    }`}    
-                >
-                    <BookOpen size={22} />
-                    <span className='text-[18px] xl:text-xl font-normal whitespace-nowrap overflow-hidden'>Домашние задания</span>
-                </Link>
-                <Link href='/student/lessons' 
-                className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/student/lessons') 
-                        ? 'bg-violet-100 text-violet-900' 
-                        : 'hover:bg-gray-100'
-                    }`}    
-                >
-                    <BookCheck size={22} />
-                    <span className='text-[18px] xl:text-xl font-normal'>Предметы</span>
-                </Link>
-                <Link href='/student/analytics' 
-                className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/student/analytics') 
-                        ? 'bg-violet-100 text-violet-900' 
-                        : 'hover:bg-gray-100'
-                    }`}    
-                >
-                    <ChartNoAxesCombined size={22} />
-                    <span className='text-[18px] xl:text-xl font-normal'>Аналитика</span>
-                </Link>
-                <Link href='/student/awards' 
-                className={`flex items-center gap-3 py-4 px-4 ${
-                    isActive('/student/awards') 
-                        ? 'bg-violet-100 text-violet-900' 
-                        : 'hover:bg-gray-100'
-                    }`}    
-                >
-                    <Award size={22} />
-                    <span className='text-[18px] xl:text-xl font-normal'>Достижения</span>
-                </Link>
-            </div>
-        </aside>
-    )
+        <div className=''>
+          <Link 
+            href='/student/home'
+            className={`flex items-center gap-3 py-4 px-4 ${
+              isActive('/student/home') 
+                ? 'bg-violet-100 text-violet-900' 
+                : 'hover:bg-gray-100'
+            }`}
+          >
+            <HomeIcon size={22} />
+            <span className='text-[18px] xl:text-xl font-normal'>Главная</span>
+          </Link>
+          <Link 
+            href='/student/news' 
+            className={`flex items-center gap-3 py-4 px-4 ${
+              isActive('/student/news') 
+                ? 'bg-violet-100 text-violet-900' 
+                : 'hover:bg-gray-100'
+            }`}
+          >
+            <Newspaper size={22} />
+            <span className='text-[18px] xl:text-xl font-normal'>Новости</span>
+          </Link>
+          <Link 
+            href='/student/schedule'
+            className={`flex items-center gap-3 py-4 px-4 ${
+              isActive('/student/schedule') 
+                ? 'bg-violet-100 text-violet-900' 
+                : 'hover:bg-gray-100'
+            }`}
+          >
+            <Calendar size={22} />
+            <span className='text-[18px] xl:text-xl font-normal'>Расписание</span>
+          </Link>
+          <Link 
+            href='/student/homework' 
+            className={`flex items-center gap-3 py-4 px-4 ${
+              isActive('/student/homework') 
+                ? 'bg-violet-100 text-violet-900' 
+                : 'hover:bg-gray-100'
+            }`}
+          >
+            <BookOpen size={22} />
+            <span className='text-[18px] xl:text-xl font-normal whitespace-nowrap overflow-hidden'>Домашние задания</span>
+          </Link>
+          <Link 
+            href='/student/lessons' 
+            className={`flex items-center gap-3 py-4 px-4 ${
+              isActive('/student/lessons') 
+                ? 'bg-violet-100 text-violet-900' 
+                : 'hover:bg-gray-100'
+            }`}
+          >
+            <BookCheck size={22} />
+            <span className='text-[18px] xl:text-xl font-normal'>Предметы</span>
+          </Link>
+          <Link 
+            href='/student/analytics' 
+            className={`flex items-center gap-3 py-4 px-4 ${
+              isActive('/student/analytics') 
+                ? 'bg-violet-100 text-violet-900' 
+                : 'hover:bg-gray-100'
+            }`}
+          >
+            <ChartNoAxesCombined size={22} />
+            <span className='text-[18px] xl:text-xl font-normal'>Аналитика</span>
+          </Link>
+          <Link 
+            href='/student/awards' 
+            className={`flex items-center gap-3 py-4 px-4 ${
+              isActive('/student/awards') 
+                ? 'bg-violet-100 text-violet-900' 
+                : 'hover:bg-gray-100'
+            }`}
+          >
+            <Award size={22} />
+            <span className='text-[18px] xl:text-xl font-normal'>Достижения</span>
+          </Link>
+        </div>
+      </aside>
+
+      <div className='lg:hidden fixed bottom-0 left-0 right-0 rounded-t-2xl bg-stone-50 border-t border-gray-200 z-50 shadow-lg'>
+        <div className='flex justify-around py-2'>
+          {mobileLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`flex flex-col items-center p-2 w-full ${
+                isActive(link.href) 
+                  ? 'text-violet-900' 
+                  : 'text-gray-500'
+              }`}
+            >
+              <link.icon size={20} />
+              <span className='text-xs mt-1'>{link.label}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <div className='pb-16 lg:pb-0'></div>
+    </>
+  )
 }

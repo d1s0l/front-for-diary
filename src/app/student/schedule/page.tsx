@@ -8,7 +8,7 @@ export default function SchedulePage() {
   const daysToShow = [scheduleData[0], scheduleData[1], scheduleData[2], scheduleData[3], scheduleData[4], scheduleData[5]];
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <div>
       <header className="flex justify-between items-center mb-10">
         <IconTextElement icon={Calendar} text='Расписание' />
         <Profile />

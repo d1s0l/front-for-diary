@@ -6,14 +6,14 @@ import { IconTextElement } from "@/components/layout/ui/Header/IconTextElement"
 export default function LessonPage() {
     return(
         <div>
-            <div className="w-full h-16 flex justify-between mb-10">
+            <header className="w-full h-16 flex justify-between mb-10">
                 <IconTextElement
                      icon={BookCheck} 
-                     text="Чат"
+                     text="Предметы"
                 />
                 <Profile />
-            </div>
-            <div className="grid 
+            </header>
+            <section className="grid 
                 grid-cols-1
                 min-[500px]:grid-cols-2
                 min-[700px]:grid-cols-3
@@ -92,7 +92,7 @@ export default function LessonPage() {
                     href="/student/lessons/gym"
                     size="md"
                 />
-            </div>
+            </section>
 
         </div>
     )
