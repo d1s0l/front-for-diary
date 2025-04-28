@@ -6,7 +6,7 @@ import { IconTextElement } from "@/components/layout/ui/Header/IconTextElement"
 export default function LessonPage() {
     return(
         <div>
-            <header className="w-full h-16 flex justify-between mb-10">
+            <header className="flex justify-between mb-10">
                 <IconTextElement
                      icon={BookCheck} 
                      text="Предметы"

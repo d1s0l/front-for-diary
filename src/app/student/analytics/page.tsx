@@ -5,13 +5,13 @@ import { ChartNoAxesCombined } from "lucide-react";
 export default function AnalyticsPage(){
     return(
         <main>
-            <header>
+            <header className="flex justify-between mb-10">
                 <IconTextElement icon={ChartNoAxesCombined} text="Аналитика" />
                 <Profile />
             </header>
 
             <section>
-                
+
             </section>
         </main>
     )

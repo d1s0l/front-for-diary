@@ -20,9 +20,12 @@ export default function MathPage() {
                 <Profile />
             </header>
 
-            <h3 className="text-violet-900 text-2xl font-semibold p-4 mb-4">Математика</h3>
+            <h3 className="text-violet-900 text-2xl font-semibold p-4 mb-4">Литература</h3>
 
-            <HomeworkMissed scheduleData={scheduleData} />
+            <HomeworkMissed 
+                scheduleData={scheduleData} 
+                subjectFilter="Литература" 
+            />
         </div>
     )
 }
