@@ -48,7 +48,7 @@ export default function LandingPage() {
 
       <section id="features" className="container mx-auto py-16 px-4">
         <h2 className="text-3xl font-bold text-center text-violet-500 mb-12">Почему выбирают нас</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {[
             {
               icon: <BookOpen className="w-10 h-10 text-violet-700" />,
@@ -61,16 +61,19 @@ export default function LandingPage() {
               title: "Расписание",
               description: "Четкое расписание уроков и мероприятий"
             },
+            /*
             {
               icon: <CheckCircle className="w-10 h-10 text-violet-700" />,
               title: "Автоматизация",
               description: "Уведомления о новых оценках и заданиях"
             },
+            
             {
               icon: <School className="w-10 h-10 text-violet-700" />,
               title: "Для учителей",
               description: "Простая система выставления оценок"
             },
+            */
             {
               icon: <Lock className="w-10 h-10 text-violet-700" />,
               title: "Безопасность",
