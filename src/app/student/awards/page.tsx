@@ -27,7 +27,7 @@ export default function AwardPage() {
             min-[1920px]:gap-4
             justify-items-center
             sm:justify-items-stretch
-            max-w-screen-4xl"
+            max-w-screen-4xl mb-20 min-[1024px]:mb-2"
             >
                 <Awards 
                     label="За олимпиаду по физике" 

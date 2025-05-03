@@ -61,7 +61,7 @@ const HomePage: React.FC = () => {
             <Profile />
         </header>
   
-        <section className="flex flex-col lg:flex-row justify-around items-center mb-5 gap-6">
+        <section className="flex flex-col lg:flex-row justify-around items-center mb-5 gap-6 ">
             <img className="hidden lg:block" src="/card.png" alt="График успеваемости" />
             <div className="flex flex-col gap-5 w-full lg:w-2/3">
                 <h2 className="text-violet-700 font-semibold text-2xl lg:text-3xl text-center lg:text-left">
@@ -114,7 +114,7 @@ const HomePage: React.FC = () => {
             </article>
         </section>
         
-        <section>
+        <section className="mb-20 min-[1024px]:mb-2">
             <div className="flex flex-row justify-between mb-4">
                 <h2 className="text-2xl text-violet-900 font-semibold">Расписание</h2>
                 <nav className="flex flex-row gap-2.5">

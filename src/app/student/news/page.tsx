@@ -10,7 +10,7 @@ export default function NewsPage(){
                 <Profile />
             </header>
 
-            <section className="bg-stone-50 rounded-2xl w-full px-4 py-2">
+            <section className="bg-stone-50 rounded-2xl w-full px-4 py-2 mb-20 min-[1024px]:mb-2">
                 <h2 className="text-black font-semibold text-base md:text-lg lg:text-2xl mb-3">Праздничный концерт в честь 9 Мая!</h2>
                 <span className="text-sm md:text-base lg:text-lg font-normal text-neutral-900">
                     7 мая в актовом зале школы состоится праздничный концерт, посвящённый Дню Победы. Начало в 14:00.<br />

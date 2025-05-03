@@ -14,7 +14,7 @@ export default function HomeWorkPage() {
                 <Profile />
             </header>
 
-            <section className="flex flex-col gap-10">
+            <section className="flex flex-col gap-10 mb-20 min-[1024px]:mb-2">
                 {daysToShow.map((daySchedule, index) => (
                 <div key={index} className="h-full">
                     <HomeWork data={[daySchedule]} visibleLessons={3} />

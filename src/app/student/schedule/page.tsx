@@ -14,7 +14,7 @@ export default function SchedulePage() {
         <Profile />
       </header>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20 min-[1024px]:mb-2">
         {daysToShow.map((daySchedule, index) => (
           <div key={index} className="h-full">
             <Schedule 
