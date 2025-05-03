@@ -49,7 +49,7 @@ export const Schedule = ({
   );
 
   return (
-    <div className="flex flex-col bg-stone-50 rounded-2xl shadow-md overflow-hidden border border-gray-200">
+    <div className="flex flex-col bg-stone-50 rounded-2xl overflow-hidden border border-gray-200">
       <section className="flex justify-center items-center p-4 border-b border-gray-200">
         <div className="text-center">
           <h3 className="text-2xl font-semibold text-violet-900">{currentDay.day}</h3>

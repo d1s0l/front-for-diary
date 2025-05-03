@@ -74,7 +74,7 @@ const HomePage: React.FC = () => {
         </section>
 
         <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr_1fr] gap-6 mb-10">
-            <article className="bg-stone-50 px-6 py-4 rounded-2xl shadow-sm">
+            <article className="bg-stone-50 px-6 py-4 rounded-2xl">
                 <div className="flex flex-wrap justify-between items-center mb-4">
                     <h2 className="font-semibold text-neutral-900 text-2xl">Заметки</h2>
                     <AddNoteButton onClick={() => setIsAdding(true)} />
@@ -103,12 +103,12 @@ const HomePage: React.FC = () => {
                 </ul>
             </article>
 
-            <article className="flex flex-col items-center justify-between bg-stone-50 px-6 pb-14 pt-4 rounded-2xl shadow-sm h-full min-h-[300px]">
+            <article className="flex flex-col items-center justify-between bg-stone-50 px-6 pb-14 pt-4 rounded-2xl h-full min-h-[300px]">
                 <h2 className="text-xl text-blue-500">Средний балл</h2>
                 <ScoreCircle score={1.20} size={150} />
             </article>
 
-            <article className="flex flex-col items-center justify-between bg-stone-50 px-6 pb-14 pt-4 rounded-2xl shadow-sm h-full min-h-[300px]">
+            <article className="flex flex-col items-center justify-between bg-stone-50 px-6 pb-14 pt-4 rounded-2xl h-full min-h-[300px]">
                 <h2 className="text-xl text-blue-500">Посещаемость</h2>
                 <PercentageCircle percentage={35} size={150} />
             </article>

@@ -52,7 +52,7 @@ export const HomeWork = ({
       );
 
       return(
-        <div className="flex flex-col bg-stone-50 rounded-2xl shadow-md overflow-hidden border border-gray-200">
+        <div className="flex flex-col bg-stone-50 rounded-2xl overflow-hidden border border-gray-200">
             <section className="flex items-center bg-gradient-to-tr from-purple-400 to-stone-50 w-full h-12 md:h-14 px-4 md:px-6 text-violet-700 text-xl md:text-2xl font-semibold">
                 <h3 className="truncate">{currentDay.day}, {currentDay.date}</h3>
             </section>

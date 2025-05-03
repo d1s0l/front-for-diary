@@ -56,7 +56,7 @@ export const Schedule = ({
   
 
   return (
-    <div className="flex flex-col bg-stone-50 rounded-2xl shadow-md overflow-hidden border border-gray-200">
+    <div className="flex flex-col bg-stone-50 rounded-2xl overflow-hidden border ">
       <div className="flex justify-between items-center p-4 border-b border-gray-200">
         <button 
           onClick={goToPrevDay}

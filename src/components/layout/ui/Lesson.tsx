@@ -41,8 +41,8 @@ export const LessonCard = ({
       className={`
         flex flex-col items-center 
         ${cardSize[size]} 
-        p-4 bg-stone-50 rounded-lg 
-        shadow-md hover:shadow-lg 
+        p-4 bg-stone-50 rounded-2xl 
+        hover:shadow-lg 
         transition-all duration-300 ease-in-out
         transform hover:scale-105
         cursor-pointer
