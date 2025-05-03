@@ -94,7 +94,7 @@ export default function GradeTable() {
                     </button>
                     <span className="font-medium text-violet-900 text-center">
                         {currentWeek.toLocaleDateString('ru-RU', { 
-                        week: 'numeric', 
+                        /*week: 'numeric', */
                         month: 'long', 
                         year: 'numeric' 
                         })}
