@@ -51,7 +51,7 @@ export const Awards = ({
         }
         
         if (awardType === "cup") {
-            return "bg-gradient-to-r from-cyan-600 to-cyan-300 border border-purple-200";
+            return "bg-gradient-to-r from-cyan-600 to-cyan-300 border";
         }
 
         switch (place) {
@@ -91,7 +91,6 @@ export const Awards = ({
                         </div>
                     )}
 
-                    {/* Заголовок */}
                     <div className="text-xl px-4 font-medium mb-2">
                         {label}
                     </div>

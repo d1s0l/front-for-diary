@@ -11,7 +11,7 @@ export function Sidebar() {
 
   const mobileLinks = [
     { href: '/student/home', icon: HomeIcon, label: 'Главная' },
-    { href: '/student/chat', icon: MessageSquareText, label: 'Чат' },
+    { href: '/student/homework', icon: BookOpen, label: 'Домашние задание'},
     { href: '/student/schedule', icon: Calendar, label: 'Расписание' },
     { href: '/student/menu', icon: MenuIcon, label: 'Меню' }
   ]
@@ -21,7 +21,7 @@ export function Sidebar() {
       <aside className='hidden lg:block rounded-r-3xl h-screen sticky top-0 flex-col py-9 text-violet-900 bg-stone-50'>
         <div className='text-lg font-medium px-4 mb-11'>Название заведения</div>
   
-        <div className='mb-5'>
+        <section className='mb-5'>
           <Link 
             href='/student/account' 
             className={`flex items-center gap-3 py-4 px-4 ${
@@ -34,19 +34,19 @@ export function Sidebar() {
             <span className='text-[18px] xl:text-xl font-normal'>Профиль</span>
           </Link>
           <Link 
-            href='/student/chat'
+            href='/student/schedule'
             className={`flex items-center gap-3 py-4 px-4 ${
-              isActive('/student/chat') 
+              isActive('/student/schedule') 
                 ? 'bg-violet-100 text-violet-900' 
                 : 'hover:bg-gray-100'
             }`}
           >
-            <MessageSquareText size={22} />
-            <span className='text-[18px] xl:text-xl font-normal'>Чат</span>
+            <Calendar size={22} />
+            <span className='text-[18px] xl:text-xl font-normal'>Расписание</span>
           </Link>
-        </div>
+        </section>
 
-        <div className='h-1 bg-violet-400 mb-5 '></div>
+        <div className='h-0.5 bg-violet-400 mb-5 '></div>
 
         <div className=''>
           <Link 
@@ -71,17 +71,7 @@ export function Sidebar() {
             <Newspaper size={22} />
             <span className='text-[18px] xl:text-xl font-normal'>Новости</span>
           </Link>
-          <Link 
-            href='/student/schedule'
-            className={`flex items-center gap-3 py-4 px-4 ${
-              isActive('/student/schedule') 
-                ? 'bg-violet-100 text-violet-900' 
-                : 'hover:bg-gray-100'
-            }`}
-          >
-            <Calendar size={22} />
-            <span className='text-[18px] xl:text-xl font-normal'>Расписание</span>
-          </Link>
+          
           <Link 
             href='/student/homework' 
             className={`flex items-center gap-3 py-4 px-4 ${
@@ -142,7 +132,7 @@ export function Sidebar() {
               }`}
             >
               <link.icon size={20} />
-              <span className='text-xs mt-1'>{link.label}</span>
+              <span className='text-xs mt-1 text-center'>{link.label}</span>
             </Link>
           ))}
         </div>

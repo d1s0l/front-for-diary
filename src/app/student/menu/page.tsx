@@ -55,16 +55,6 @@ const MobileTabletOnlyPage = () => {
                 </Link>
 
                 <Link
-                    href='/student/homework' 
-                    className="flex flex-col gap-1.5 items-center text-violet-900"
-                >
-                    <div className='flex justify-center bg-violet-200 hover:bg-violet-300 rounded-2xl p-3'>
-                        <BookOpen size={34} />
-                    </div>
-                    <span className='text-sm sm:text-base text-center font-normal'>Домашние задания</span>
-                </Link>
-
-                <Link
                     href='/student/lessons' 
                     className="flex flex-col gap-1.5 items-center text-violet-900"
                 >
