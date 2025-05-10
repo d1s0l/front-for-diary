@@ -65,7 +65,7 @@ export const Awards = ({
     return (
         <div
             className={cn(
-                "flex flex-col w-[216px] h-[282px] rounded-lg relative overflow-hidden",
+                "flex flex-col w-[216px] h-[282px] rounded-lg relative overflow-hidden hover:shadow-lg transition-all duration-300 ease-in-outtransform hover:scale-105",
                 getBgColor(place, awardType),
                 className
             )}
