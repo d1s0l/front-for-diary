@@ -19,7 +19,7 @@ export function Sidebar() {
   return (
     <>
       <aside className='hidden lg:block rounded-r-3xl h-screen sticky top-0 flex-col py-9 text-violet-900 bg-stone-50'>
-        <div className='text-lg font-medium px-4 mb-11'>Название заведения</div>
+        <div className='text-lg font-medium px-4 mb-11'>МБОУ СОШ №21</div>
   
         <section className='mb-5'>
           <Link 
